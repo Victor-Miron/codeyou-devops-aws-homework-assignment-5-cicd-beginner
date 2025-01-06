@@ -22,7 +22,7 @@ You need to create a GitHub Actions workflow file (`.github/workflows/python-ci.
 3. **Install dependencies**: Install all dependencies listed in `requirements.txt`.
 4. **Linting**: Add a step to ensure the code is clean by running the `flake8` linter.
 5. **Dependency Security Check**: Use `Safety` to check for known vulnerabilities in the app’s dependencies.
-6. **Code Security Scan**: Use `Bandit` to identify potential security issues in the app's code.
+6. **Code Security Scan**: Use `Bandit` to identify potential security issues in the app's code .
 
 ---
 
