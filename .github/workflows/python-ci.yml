@@ -29,7 +29,7 @@ jobs:
           SAFETY_API_KEY: ${{ secrets.SAFETY_API_KEY }}
         run: |
           pip install safety
-          safety scan -r requirements.txt --exit-zero
+          safety scan -r requirements.txt
       
       - name: Install and Run Bandit
         run: |
