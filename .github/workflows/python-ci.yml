@@ -17,11 +17,19 @@ jobs:
         with:
           python-version: 3.9
       
-      - name: Install Dependencies
+      - name: Install Dependencies and Run Flake
         run: |
           python3 -m pip install --upgrade pip
           pip install -r requirements.txt
           pip install flake8 
-
-      - name: Run Flake
-        run: flake8 .
+          flake8 .
+    
+      - name: Install and Run Safety
+        run:
+          pip install safety
+          safety chec -r requirements.txt
+      
+      - name: Install and Run Bandit
+        run: |
+          pip install bandit
+          bandit -r .
