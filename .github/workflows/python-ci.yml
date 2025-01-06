@@ -25,6 +25,8 @@ jobs:
           flake8 .
     
       - name: Install and Run Safety
+        env:
+          SAFETY_API_KEY: ${{ secrets.SAFETY_API_KEY }}
         run: |
           pip install safety
           safety scan -r requirements.txt
