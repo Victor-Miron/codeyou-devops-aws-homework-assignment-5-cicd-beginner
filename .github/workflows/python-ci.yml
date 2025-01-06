@@ -27,7 +27,7 @@ jobs:
       - name: Install and Run Safety
         run: |
           pip install safety
-          safety check -r requirements.txt
+          safety scan -r requirements.txt
       
       - name: Install and Run Bandit
         run: |
